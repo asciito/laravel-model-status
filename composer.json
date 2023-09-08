@@ -1,0 +1,42 @@
+{
+    "name": "asciito/laravel-model-status",
+    "description": "Simple package to manage the status column of a Model",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Ayax Córdova",
+            "email": "ayax.cordova@aydev.mx"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Asciito\\LaravelModelStatus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Asciito\\LaravelModelStatus\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.18",
+        "pestphp/pest-plugin-laravel": "^2.2"
+    },
+    "extras": {
+        "laravel": {
+            "providers": [
+                "Asciito\\LaravelModelStatus\\ModelStatusServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
