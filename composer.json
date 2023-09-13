@@ -28,7 +28,7 @@
         "pestphp/pest-plugin-laravel": "^2.2",
         "laravel/pint": "^1.13"
     },
-    "extras": {
+    "extra": {
         "laravel": {
             "providers": [
                 "Asciito\\LaravelModelStatus\\ModelStatusServiceProvider"
