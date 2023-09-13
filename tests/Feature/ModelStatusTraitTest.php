@@ -49,8 +49,6 @@ it('show only default state', function () {
 test('a model with constant status column defined', function () {
     $model = ConstantStatusColumnModel::factory()->create();
 
-    expect(property_exists($model, 'my_status_column'))
-        ->toBeTrue()
-        ->and($model->my_status_column)
+    expect($model->my_status_column)
         ->toBe(Status::LOREM);
 });
