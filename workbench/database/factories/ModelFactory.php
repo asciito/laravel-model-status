@@ -3,8 +3,8 @@
 namespace Workbench\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Workbench\App\Models\Model;
 use Workbench\App\Enums\Status;
+use Workbench\App\Models\Model;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Workbench\App\Model>

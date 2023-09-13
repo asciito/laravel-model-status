@@ -14,14 +14,14 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app): array
     {
         return [
-            ModelStatusServiceProvider::class
+            ModelStatusServiceProvider::class,
         ];
     }
 
     protected function getEnvironmentSetUp($app)
     {
-        (require(__DIR__.'/../workbench/database/migrations/create_models_table.php'))->up();
+        (require __DIR__.'/../workbench/database/migrations/create_models_table.php')->up();
 
-        (require(__DIR__.'/../workbench/database/migrations/create_constant_status_column_models_table.php'))->up();
+        (require __DIR__.'/../workbench/database/migrations/create_constant_status_column_models_table.php')->up();
     }
 }

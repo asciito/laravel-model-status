@@ -2,7 +2,7 @@
 
 namespace Workbench\App\Enums;
 
-Enum Status: string implements \Asciito\LaravelModelStatus\Status\Contracts\Status
+enum Status: string implements \Asciito\LaravelModelStatus\Status\Contracts\Status
 {
     case LOREM = 'lorem';
     case IPSUM = 'ipsum';
@@ -21,6 +21,6 @@ Enum Status: string implements \Asciito\LaravelModelStatus\Status\Contracts\Stat
      */
     public static function getDefault(): static
     {
-        return static::IPSUM;
+        return self::IPSUM;
     }
 }

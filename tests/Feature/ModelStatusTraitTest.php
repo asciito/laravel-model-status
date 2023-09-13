@@ -1,8 +1,8 @@
 <?php
 
-use Workbench\App\Models\Model;
 use Workbench\App\Enums\Status;
 use Workbench\App\Models\ConstantStatusColumnModel;
+use Workbench\App\Models\Model;
 
 use function Pest\Laravel\assertDatabaseCount;
 
@@ -17,7 +17,6 @@ it('check if the model has a default state', function () {
 
     expect($model->status)->toBe(Status::getDefault());
 });
-
 
 it('change the model status', function () {
     $model = Model::factory()->create();

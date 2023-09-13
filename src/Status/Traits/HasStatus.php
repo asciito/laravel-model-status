@@ -3,14 +3,11 @@
 namespace Asciito\LaravelModelStatus\Status\Traits;
 
 use Asciito\LaravelModelStatus\Status\Contracts\Status;
-use Asciito\LaravelModelStatus\Status\Scopes\StatusScope;
 
 trait HasStatus
 {
     /**
      * This method is executed after the boot model method
-     * 
-     * @return void
      */
     public static function bootHasStatus(): void
     {
@@ -19,8 +16,6 @@ trait HasStatus
 
     /**
      * Change the current state
-     * 
-     * @return bool
      */
     public function changeState(Status $status): bool
     {
@@ -33,8 +28,6 @@ trait HasStatus
 
     /**
      * Get status column name
-     * 
-     * @return string
      */
     public static function getStatusColumn(): string
     {
@@ -42,12 +35,9 @@ trait HasStatus
     }
 
     /**
-     *
      * Get fully qualified column name of the model
-     * 
+     *
      * e.g. <table-name>.<status-column-name>
-     * 
-     * @return string
      */
     public function getQualifiedStatusColumn(): string
     {

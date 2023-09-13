@@ -14,7 +14,7 @@ class ModelStatusServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
-        Blueprint::macro('status', function (array $values, ?string $column = null) {
+        Blueprint::macro('status', function (array $values, string $column = null) {
             $values = collect($values)
                 ->map(function (Status|string $item) {
                     if ($item instanceof Status) {
