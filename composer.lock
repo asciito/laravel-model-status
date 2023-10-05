@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12b5158b79658f17810f29c4e9bc906d",
-    "packages": [],
+    "content-hash": "5f4445bc82c2534349c52aa72a9a05e7",
+    "packages": [
+        {
+            "name": "asciito/laravel-package",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asciito/laravel-package.git",
+                "reference": "e5dcb2a55f625bb13b873fdcef1c0c8edbe1c946"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asciito/laravel-package/zipball/e5dcb2a55f625bb13b873fdcef1c0c8edbe1c946",
+                "reference": "e5dcb2a55f625bb13b873fdcef1c0c8edbe1c946",
+                "shasum": ""
+            },
+            "require-dev": {
+                "laravel/pint": "^v1.13.1",
+                "nunomaduro/larastan": "^2.0",
+                "orchestra/testbench": "^8.10",
+                "pestphp/pest": "^v1.23.1",
+                "pestphp/pest-plugin-laravel": "^1.4",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Asciito\\LaravelPackage\\LaravelPackageServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Asciito\\LaravelPackage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ayax Córdova",
+                    "email": "ayax.cordova@aydev.mx"
+                }
+            ],
+            "description": "The simple package to build packages for Laravel",
+            "keywords": [
+                "build",
+                "laravel",
+                "package",
+                "tool"
+            ],
+            "support": {
+                "issues": "https://github.com/asciito/laravel-package/issues",
+                "source": "https://github.com/asciito/laravel-package/tree/v0.4.0"
+            },
+            "time": "2023-10-04T18:32:07+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "brianium/paratest",
