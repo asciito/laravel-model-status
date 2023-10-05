@@ -3,17 +3,24 @@
 namespace Asciito\LaravelModelStatus;
 
 use Asciito\LaravelModelStatus\Status\Contracts\Status;
+use Asciito\LaravelPackage\Package\Package;
+use Asciito\LaravelPackage\Package\PackageServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\ServiceProvider;
 
-class ModelStatusServiceProvider extends ServiceProvider
+class ModelStatusServiceProvider extends PackageServiceProvider
 {
+    protected function configurePackage(Package $package): void
+    {
+        $package
+            ->setName('model-status')
+            ->withConfig();
+    }
+
     /**
      * {@inheritDoc}
      */
-    public function register(): void
+    public function packageRegistered(): void
     {
-        //
         Blueprint::macro('status', function (array $values, string $column = null) {
             $values = collect($values)
                 ->map(function (Status|string $item) {
@@ -25,19 +32,9 @@ class ModelStatusServiceProvider extends ServiceProvider
                 })
                 ->all();
 
-            $columnName = $column ?? config('model-status.column', 'status');
+            $column ??= config('model-status.column', 'status');
 
-            return $this->enum($columnName, $values);
+            return $this->enum($column, $values);
         });
-    }
-
-    public function boot(): void
-    {
-        $this->loadConfig();
-    }
-
-    protected function loadConfig(): void
-    {
-        $this->mergeConfigFrom(__DIR__.'/../config/model-status.php', 'model-status');
     }
 }
